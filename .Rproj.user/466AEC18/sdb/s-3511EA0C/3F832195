@@ -1,0 +1,16 @@
+{
+    "contents" : "\nallfiles<-list.files('./data')\ninteresting<-paste0('./data/',allfiles[3:5])\n\nrawdf<-read.xls(file.choose(), pattern='Classification File',sheet=1, verbose=FALSE, blank.lines.skip=TRUE,header=TRUE,as.is=TRUE)\n\ncleanQuasar<-rawdf[2:7,c(1,6,10)]\n\nlines<-sapply(interesting,function(x) readLines(x,3))\n\ndatafiles<-dir('./data')\nfilename<-paste0('./data/',datafiles[3])\nsheetrange=c(1:13)\ndf<-data.frame(workbook=rep(filename,length(sheetrange)),sheet=sheetrange)\nworkbookloader <- function (filename,sheetrange) {\n  readWorksheetFromFile(file=filename,sheet=sheetrange, header=TRUE,startRow=2, endCol= 11)\n}\nfor(i in list){\n  varname=paste0('./data/','quasar','_coladd_',i)\n  datafiles<-dir('./data')\n  filename<-paste0('./data/',datafiles[3])\n  sheetout<-workbookloader(filename,sheetrange=i)\n  save(sheetout,file=varname)\n}\n  \n",
+    "created" : 1360111046007.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1778062484",
+    "id" : "3F832195",
+    "lastKnownWriteTime" : 1360269914,
+    "path" : "~/Documents/R/2013_Feb_DSTO/cognitive_load/munge/scrape_quasar.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

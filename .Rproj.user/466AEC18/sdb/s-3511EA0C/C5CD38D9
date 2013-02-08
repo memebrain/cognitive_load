@@ -1,0 +1,15 @@
+{
+    "contents" : "\n\nurl<-'https://dl.dropbox.com/u/7710864/data/csv_hid/ss06hid.csv'\ndestfile='housing.txt'\ndownload.file(url,destfile,method='curl')\n\nhousing<-read.csv('housing.txt',header=TRUE)\n\nstr(housing)\n",
+    "created" : 1360111034107.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "353958314",
+    "id" : "C5CD38D9",
+    "lastKnownWriteTime" : 1359680418,
+    "path" : "~/Documents/R/coursera/Data_Analysis/Quiz_2/question_3.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
